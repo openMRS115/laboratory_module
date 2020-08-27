@@ -1,0 +1,2 @@
+org/openmrs/module/labtest/extension/html/AdminList.class
+org/openmrs/module/labtest/web/controller/LabtestController.class

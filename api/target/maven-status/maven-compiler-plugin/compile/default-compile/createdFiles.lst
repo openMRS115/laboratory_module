@@ -1,0 +1,11 @@
+org/openmrs/module/labtest/util/JsonUtil.class
+org/openmrs/module/labtest/LabtestActivator.class
+org/openmrs/module/labtest/dao/LaboratoryDAO.class
+org/openmrs/module/labtest/service/LaboratoryService.class
+org/openmrs/module/labtest/util/HttpUtil.class
+org/openmrs/module/labtest/Item.class
+org/openmrs/module/labtest/serviceimpl/LaboratoryServiceImpl.class
+org/openmrs/module/labtest/daoimpl/LaboratoryDAOImpl.class
+org/openmrs/module/labtest/LabtestConfig.class
+org/openmrs/module/labtest/util/DateUtil.class
+org/openmrs/module/labtest/pojo/LaboratoryBean.class

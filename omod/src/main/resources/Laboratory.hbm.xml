@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="org.openmrs.module.labtest.pojo.LaboratoryBean"
+	       table="labtest_result">
+		<id name="resultId" type="int" column="result_id">
+			<generator class="native" />
+		</id>
+		<property name="identifier" type="java.lang.String" column="identifier" />
+		<property name="name" type="java.lang.String" column="patient_name" />
+		<property name="gender" type="java.lang.String" column="gender" />
+		<property name="age" type="java.lang.Integer" column="age" />
+		<property name="oralResult" type="java.lang.String" column="oral_result" />
+		<property name="igGResult" type="java.lang.Double" column="IgG" />
+		<property name="igMResult" type="java.lang.Double" column="IgM" />
+		<property name="hormoneResult" type="java.lang.String" column="hormone_result" />
+		<property name="symptoms" type="java.lang.String" column="symptoms" />
+		<property name="patientRecord" type="java.lang.String" column="patient_record" />
+		<property name="status" type="java.lang.String" column="patient_status" />
+		<property name="province" type="java.lang.String" column="stateProvince" />
+		<property name="city" type="java.lang.String" column="cityVillage" />
+		<property name="latitude" type="java.lang.String" column="latitude" />
+		<property name="longitude" type="java.lang.String" column="longitude" />
+		<property name="dead" type="java.lang.Boolean" column="is_dead" />
+		<property name="deathDate" type="java.lang.String" column="deathDate" />
+		<property name="createTime" type="java.lang.String" column="update_time" />
+	</class>
+</hibernate-mapping>

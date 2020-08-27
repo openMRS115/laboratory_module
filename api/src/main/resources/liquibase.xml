@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+ 
+    <!--
+    	See http://wiki.openmrs.org/display/docs/Module+liquibase+File for 
+    	documentation on this file.
+    
+        See http://www.liquibase.org/manual/home#available_database_refactorings
+        for a list of supported elements and attributes
+    -->
+ 
+ 	<!-- Uncomment the changeset below if you want to make the Item class persistable, see also Item and LabtestDaoTest -->
+ 	<!--
+	<changeSet id="labtest-2016-08-02-12-21" author="raff">
+		<preConditions onFail="MARK_RAN">
+			<not><tableExists tableName="labtest_item"/></not>
+		</preConditions>
+		<comment>
+			Creating the labtest_item table
+		</comment>
+		<createTable tableName="labtest_item">
+			<column name="labtest_item_id" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="uuid" type="char(38)">
+				<constraints nullable="false" unique="true"></constraints>
+			</column>
+			<column name="owner" type="int" />
+			<column name="description" type="varchar(255)" />
+		</createTable>
+        <addForeignKeyConstraint constraintName="labtest_item_owner_fk" baseTableName="labtest_item" baseColumnNames="owner"  referencedTableName="users"
+                                 referencedColumnNames="user_id" />
+    </changeSet> -->
+    <changeSet id="labtest-2020-07-21-10-03" author="yilunjiang">
+        <!--<validCheckSum>3:89ecc958ef1a221ecb0776e0ce4a8a32</validCheckSum>-->
+        <preConditions onFail="MARK_RAN">
+            <not><tableExists tableName="labtest_result"/></not>
+        </preConditions>
+        <comment>
+            Creating the labtest_result table
+        </comment>
+        <createTable tableName="labtest_result">
+            <column name="result_id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="identifier" type="varchar(255)"></column>
+            <column name="patient_name" type="varchar(255)"></column>
+            <column name="gender" type="varchar(20)"></column>
+            <column name="age" type="int"></column>
+            <column name="oral_result" type="varchar(100)"></column>
+            <column name="IgG" type="double"></column>
+            <column name="IgM" type="double"></column>
+            <column name="hormone_result" type="varchar(100)"></column>
+            <column name="symptoms" type="varchar(255)"></column>
+            <column name="patient_record" type="varchar(255)"></column>
+            <column name="patient_status" type="varchar(100)"></column>
+            <column name="stateProvince" type="varchar(255)"></column>
+            <column name="cityVillage" type="varchar(255)"></column>
+            <column name="latitude" type="varchar(255)"></column>
+            <column name="longitude" type="varchar(255)"></column>
+            <column name="is_dead" type="boolean"></column>
+            <column name="deathDate" type="varchar(255)"></column>
+            <column name="update_time" type="varchar(255)"></column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
